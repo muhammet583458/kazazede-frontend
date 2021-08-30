@@ -1,0 +1,8 @@
+<div *ngIf="!dataLoaded" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table>
+    <tr *ngFor="let city of cities">
+        <td>{{city.cityName}}</td>
+    </tr>
+</table>

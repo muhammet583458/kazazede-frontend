@@ -1,0 +1,21 @@
+
+<table style="margin:2%;width: 95%;" class="table table-primary table-hover">
+    <thead>
+      <tr>
+        <th scope="col">İsim</th>
+        <th scope="col">Soyisim</th>
+        <th scope="col">İl</th>
+        <th scope="col">İlçe</th>
+        <th scope="col">Durum</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sufferer of sufferers">
+            <td>{{sufferer.suffererName}}</td>
+            <td>{{sufferer.suffererLastName}}</td>
+            <td>{{sufferer.suffererCity}}</td>
+            <td>{{sufferer.suffererDistrict}}</td>
+            <td>{{sufferer.suffererStatus}}</td>
+        </tr>
+    </tbody>
+  </table>
