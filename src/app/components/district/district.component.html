@@ -1,1 +1,20 @@
-<p>district works!</p>
+<div class="container mt-4">
+    <table>
+        <tr>
+            <td class="col-xl-2 w-25">
+                <h3>İl Seçin</h3>
+                <ul style="max-height: 10em; overflow:auto;" class="list-group">
+                    <li routerLink="/sufferers/city/{{city.id}}" (click)="setCurrentCity(city)" [class]="getCurrentCityClass(city)" *ngFor="let city of cities">{{city.cityName}}</li>
+                  </ul>
+                
+        </td>
+            <td  class="col-xl-2 align-top w-25">
+                <h3 >İlçe Seçin</h3>
+                <ul style="max-height: 10em; overflow:auto;" class="list-group ">
+                    <li routerLink="/sufferers/district/{{district.id}}" (click)="setCurrentDistrict(district)" [class]="getCurrentDistrictClass(district)" *ngFor="let district of districts">{{district.districtName}}</li>
+                  </ul>        
+                </td>
+        </tr>
+    </table>
+   
+</div>

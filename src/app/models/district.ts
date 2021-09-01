@@ -1,7 +1,7 @@
 import { City } from "./city";
 
 export interface District {
-  districtId: number;
-  districtName: number;
+  id: number;
+  districtName: String;
   cityId: City;
 }

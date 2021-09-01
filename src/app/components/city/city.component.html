@@ -1,8 +1,5 @@
-<div *ngIf="!dataLoaded" class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-<table>
-    <tr *ngFor="let city of cities">
-        <td>{{city.cityName}}</td>
-    </tr>
-</table>
+<h3 >İlçe Seçin</h3>
+                <ul style="max-height: 10em; overflow:auto;" class="list-group ">
+                    <li class="list-group-item">Hepsi</li>
+                    <li class="list-group-item" *ngFor="let district of districts">{{district.districtName}}</li>
+                  </ul>  
