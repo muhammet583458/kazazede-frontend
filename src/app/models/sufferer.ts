@@ -1,5 +1,6 @@
 import { City } from "./city";
 import { District } from "./district";
+import { Reporter } from "./reporter";
 
 export interface Sufferer{
     id:number;
@@ -7,7 +8,7 @@ export interface Sufferer{
     suffererLastName:string;
     suffererAddress:string;
     suffererStatus:string;
-    suffererCity:City;
-    suffererDistrict:District;
-    suffererReporter:number;
+    city:City;
+    district:District;
+    suffererReporter:Reporter;
 }
