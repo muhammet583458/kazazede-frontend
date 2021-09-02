@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CityComponent } from './components/city/city.component';
 import { DistrictComponent } from './components/district/district.component';
 import { SuffererComponent } from './components/sufferer/sufferer.component';
+import { SuffererDetailComponent } from './components/sufferer-detail/sufferer-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CityComponent,
     DistrictComponent,
-    SuffererComponent
+    SuffererComponent,
+    SuffererDetailComponent
   ],
   imports: [
     BrowserModule,

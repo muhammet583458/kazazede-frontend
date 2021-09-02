@@ -10,5 +10,5 @@ export interface Sufferer{
     suffererStatus:string;
     city:City;
     district:District;
-    suffererReporter:Reporter;
+    reporter:Reporter;
 }

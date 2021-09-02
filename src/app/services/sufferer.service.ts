@@ -18,4 +18,7 @@ export class SuffererService {
   getSufferersByDistrict(id:number):Observable<SuffererResponseModel>{
     return this.httpClient.get<SuffererResponseModel>(this.apiUrl+"getbydistrict?districtId="+id);
   }
+  getSufferersById(id:number):Observable<SuffererResponseModel>{
+    return this.httpClient.get<SuffererResponseModel>(this.apiUrl+"getbyid?id="+id);
+  }
 }
