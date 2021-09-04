@@ -10,6 +10,7 @@ import { SuffererService } from 'src/app/services/sufferer.service';
 })
 export class SuffererDetailComponent implements OnInit {
   sufferers:Sufferer[]=[];
+  isFounder:boolean=false;
   constructor(private suffererService: SuffererService,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -18,10 +19,14 @@ export class SuffererDetailComponent implements OnInit {
         this.getSuffererDetail(params["id"]);
       }
     })
+    
   }
   getSuffererDetail(id:number){
     this.suffererService.getSufferersById(id).subscribe((response)=>{
     this.sufferers=response.data;
+    if(this.sufferers[0].founder!=null){
+      this.isFounder=true;
+    }
     console.log(this.sufferers);
     })
   }

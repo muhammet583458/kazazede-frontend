@@ -1,5 +1,6 @@
 import { City } from "./city";
 import { District } from "./district";
+import { Founder } from "./founder";
 import { Reporter } from "./reporter";
 
 export interface Sufferer{
@@ -11,4 +12,5 @@ export interface Sufferer{
     city:City;
     district:District;
     reporter:Reporter;
+    founder:Founder;
 }
