@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Sufferer } from '../models/sufferer';
 import { SuffererResponseModel } from '../models/suffererResponseModel';
 import { SufferersResponseModel } from '../models/sufferersResponseModel';
 
@@ -21,5 +22,8 @@ export class SuffererService {
   }
   getSufferersById(id:number):Observable<SufferersResponseModel>{
     return this.httpClient.get<SufferersResponseModel>(this.apiUrl+"getbyid?id="+id);
+  }
+  add(sufferer:Sufferer){
+    return this.httpClient.post(this.apiUrl+"add",sufferer);
   }
 }
