@@ -12,6 +12,7 @@ import { SuffererDetailComponent } from './components/sufferer-detail/sufferer-d
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { AddFounderComponent } from './components/add-founder/add-founder.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SuffererAddComponent } from './components/sufferer-add/sufferer-add.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DistrictComponent,
     SuffererComponent,
     SuffererDetailComponent,
-    AddFounderComponent
+    AddFounderComponent,
+    SuffererAddComponent
   ],
   imports: [
     BrowserModule,

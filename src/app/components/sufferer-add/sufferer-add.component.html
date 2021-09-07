@@ -1,0 +1,107 @@
+<div class="container mx-auto mt-5">
+  <div class="row">
+    <form [formGroup]="suffererAddForm">
+      <div class="col-md-6 d-inline-flex">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="reporterName">Adınız</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reporterName"
+                id="reporterName"
+                placeholder="Ad"
+              />
+            </div>
+            <div class="form-group">
+              <label for="reporterLastName">Soyadınız</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reporterLastName"
+                id="reporterLastName"
+                placeholder="Soyad"
+              />
+            </div>
+            <div class="form-group">
+              <label for="reporterPhone">Telefon Numaranız</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reporterPhone"
+                id="reporterPhone"
+                placeholder="Telefon Numarası"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-inline-flex">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h3 class="card-title">Kayıp Kişinin</h3>
+            <div class="form-group">
+              <label for="suffererName">Adı</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="suffererName"
+                id="suffererName"
+                placeholder="Ad"
+              />
+            </div>
+            <div class="form-group">
+              <label for="suffererLastName">Soyadı</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="suffererLastName"
+                id="suffererLastName"
+                placeholder="Soyad"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="suffererCity">İl Seçiniz </label>
+              <select
+                [(ngModel)]="selectedId"
+                (change)="getDistricts()"
+                class="form-control"
+                formControlName="suffererCity"
+                id="suffererCity"
+              >
+                <option value="{{ city.id }}" *ngFor="let city of cities">
+                  {{ city.cityName }}
+                </option>
+              </select>
+              <label for="suffererDistrict">İlçe Seçiniz</label>
+              <select
+                class="form-control"
+                formControlName="suffererDistrict"
+                id="suffererDistrict"
+              >
+                <option value="{{ district.id }}" *ngFor="let district of districts">
+                  {{ district.districtName }}
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="suffererAddress">Adresi</label>
+              <textarea
+                type="textarea"
+                class="form-control"
+                formControlName="suffererAddress"
+                id="suffererAddress"
+                rows="3"
+                placeholder="Adres"
+              ></textarea>
+            </div>
+            <button class="btn btn-success" (click)="submit()">Bildiri Gönder</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
